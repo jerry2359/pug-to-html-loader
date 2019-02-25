@@ -1,0 +1,19 @@
+{
+  "name": "pug-to-html-loader",
+  "version": "1.0.1",
+  "description": "增强pug-html-loader，增加query.name属性。",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pug-to-html-loader",
+    "pug-html-loader"
+  ],
+  "author": "jerry2359",
+  "license": "ISC",
+  "dependencies": {
+    "loader-utils": "^0.2.17",
+    "pug": "^2.0.0-rc.2"
+  }
+}
