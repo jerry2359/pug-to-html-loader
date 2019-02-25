@@ -1,12 +1,37 @@
-## Build Setup
+## 用于将pug转换成html的webpack loader。搭配html-loader一块使用
 
 ``` bash
 # install dependencies
-npm install
+npm i -D pug-to-html-loader
+```
 
-# serve with hot reload at localhost:7438
-# starting dashboard on localhost:7439
-npm start or npm run dev
-
-# build for production with minification
-npm run build
+```js
+{
+        test: /\.pug$/,
+        include: [path.resolve(__dirname, 'src')],
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              attrs: [
+                ':data-src',
+                ':data-href',
+                ':data-pc',
+                ':data-mb',
+                'img:src'
+              ],
+              minimize: {
+                collapseWhitespace: false
+              }
+            }
+          },
+          {
+            loader: 'pug-to-html-loader',
+            query: {
+              data: { name: '[name]' },
+              pretty: true
+            }
+          }
+        ]
+      }
+```
