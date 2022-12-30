@@ -13,7 +13,7 @@
   "author": "jerry2359",
   "license": "ISC",
   "dependencies": {
-    "loader-utils": "^0.2.17",
+    "loader-utils": "^3.2.1",
     "pug": "^2.0.0-rc.2"
   },
   "repository": {
